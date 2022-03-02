@@ -10,10 +10,27 @@ class Course extends Model
     use HasFactory;
 
     protected $guarded = ['id', 'status'];
+    protected $withCount = ['students', 'reviews'];
 
     const BORRADOR = 1;
     const REVISION = 2;
     const PUBLICADO = 3;
+
+    public function getRatingAttribute()
+    {
+        // el if es para en caso de que un curso no tenga calificacion aparesca automaticamente con 5 estrellas
+        if($this->reviews_count)
+        {
+            // round para redondear los decimales, el 1 es el valor de los decimales
+            return round($this->reviews->avg('rating'), 1); // avg es para sacar un promedio de las calificaciones
+        }
+        else
+        {
+            return 5;
+        }
+
+        
+    }
 
     //Relacion uno a muchos
 
