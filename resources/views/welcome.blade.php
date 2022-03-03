@@ -1,4 +1,5 @@
 <x-app-layout>
+    {{-- PORTADA --}}
     <section class="bg-cover" style="background-image: url({{asset('img/home/people-ga847f2c7d_1920.jpg')}})">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
             <div class="w-full md:w-3/4 lg:w-1/2">
@@ -18,7 +19,7 @@
 
             </div>     
         </div>
-    </section>
+    </section>{{-- PORTADA --}}
 
     <section class="mt-24">
         <h1 class="text-gray-600 text-center text-3xl uppercase">Contenido</h1>
@@ -98,7 +99,7 @@
                                 {{$course->students_count}}
                             </p>
                         </div>
-                        <a href="{{route('course.show', $course)}}" class=" w-full bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">Mas informacion</a>
+                        <a href="{{route('courses.show', $course)}}" class=" w-full bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">Mas informacion</a>
                     </div>
                 </article>
             @endforeach
