@@ -6,4 +6,4 @@ use App\Http\Livewire\InstructorCourses;
 
 Route::redirect('', 'instructor/courses');
 
-Route::get('courses', InstructorCourses::class)->name('instructor.courses.index');
+Route::get('courses', InstructorCourses::class)->middleware('can:Leer cursos')->name('instructor.courses.index');
