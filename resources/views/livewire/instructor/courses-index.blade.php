@@ -2,8 +2,9 @@
 
     <x-table-responsive>
 
-        <div class="px-6 py-4">
-            <input wire:model="search" class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full  shadow-sm" placeholder="Ingrese el nombre de un curso">
+        <div class="px-6 py-4 flex">
+            <input wire:model="search" class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline flex-1  shadow-sm" placeholder="Ingrese el nombre de un curso">
+            <a class="btn btn-danger ml-2" href="{{ route('instructor.courses.create') }}">Crear nuevo curso</a>
         </div>
 
         @if ($courses->count())
