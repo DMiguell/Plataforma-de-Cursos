@@ -52,7 +52,8 @@ class CourseController extends Controller
             'description' => 'required',
             'category_id' => 'required',
             'level_id' => 'required',
-            'price_id' => 'required'
+            'price_id' => 'required',
+            'file' => 'image'
 
         ]);
  
@@ -111,7 +112,8 @@ class CourseController extends Controller
             'description' => 'required',
             'category_id' => 'required',
             'level_id' => 'required',
-            'price_id' => 'required'
+            'price_id' => 'required',
+            'file' => 'image'
 
         ]);
 
