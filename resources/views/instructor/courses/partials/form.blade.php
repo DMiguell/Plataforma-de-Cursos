@@ -68,7 +68,7 @@
     </figure>
     <div class="">
         <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt, sint, vero ad ipsam incidunt obcaecati blanditiis voluptas animi odit quasi! Facilis ipsum cumque ab nulla deleniti, exercitationem eius saepe?</p>
-        {!! Form::file('file', ['class' => 'appearance-none border rounded py-2 px-3 text-gray-700 leading-tight  w-full shadow-sm w-full' . ($errors->has('file') ? ' border-red-600 ' : ''), 'id' => 'file']) !!}
+        {!! Form::file('file', ['class' => 'appearance-none border rounded py-2 px-3 text-gray-700 leading-tight shadow-sm w-full' . ($errors->has('file') ? ' border-red-600 ' : ''), 'id' => 'file']) !!}
         
         @error('file')
             <strong class="text-xs text-red-600">{{ $message }}</strong>
